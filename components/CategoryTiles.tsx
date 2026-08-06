@@ -11,25 +11,27 @@ const CATEGORIES = [
 
 export default function CategoryTiles() {
   return (
-    <section className="bg-[#f9f9f9] pb-10 px-4 sm:px-8 lg:px-[80px] w-full overflow-x-auto">
-      <div className="flex gap-2 items-start mx-auto w-full max-w-[1224px] min-w-0">
+    <section className="bg-[#f9f9f9] pb-10 px-4 sm:px-8 lg:px-[80px] w-full overflow-x-auto lg:overflow-visible">
+      {/* Mobile/tablet: horizontal scroll. Desktop: evenly distributed (space-between) */}
+      <div className="flex gap-2 sm:gap-3 lg:gap-0 lg:justify-between items-start mx-auto w-full max-w-[1224px] min-w-0">
         {CATEGORIES.map((cat) => (
           <button
             key={cat.id}
-            className="flex flex-col gap-2 items-center shrink-0
-              w-[75px] lg:w-[113px]
-              group"
+            className="flex flex-col gap-2 items-center shrink-0 group"
           >
-            {/* Tile circle */}
-            <div
+            {/* Icon: muted outer ring + inner placeholder (decorative) */}
+            <span
+              aria-hidden="true"
               className="
-                bg-[#e2e2e2] rounded-full overflow-hidden
-                size-[56px] lg:size-[82px]
-                group-hover:bg-[#d0d0d0] transition-colors
+                flex items-center justify-center rounded-full
+                bg-[#f1f1f1] group-hover:bg-[#e8e8e8] transition-colors
+                size-[56px] sm:size-[70px] lg:size-[82px]
               "
-            />
+            >
+              <span className="rounded-full bg-[#e2e2e2] size-[30px] sm:size-[38px] lg:size-[44px]" />
+            </span>
             {/* Label */}
-            <span className="font-bold text-[10px] lg:text-[12px] text-[#222] text-center leading-tight">
+            <span className="font-bold text-[10.24px] sm:text-[11px] lg:text-[12.8px] text-[#222] text-center leading-tight whitespace-nowrap">
               {cat.label}
             </span>
           </button>
