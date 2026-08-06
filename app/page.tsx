@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import CategoryTiles from "@/components/CategoryTiles";
 import HorizontalFilters from "@/components/HorizontalFilters";
 import ProductGrid from "@/components/ProductGrid";
 import Pagination from "@/components/Pagination";
@@ -58,6 +59,7 @@ export default function ProductListingPage() {
         </div>
       </section>
 
+      <CategoryTiles />
       <HorizontalFilters />
       <ProductGrid />
       <Pagination />

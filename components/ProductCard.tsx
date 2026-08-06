@@ -49,7 +49,7 @@ export default function ProductCard({
             <span className="text-[24px] font-bold text-[#222] leading-none">{price.split(".")[0]}</span>
             <sup className="text-[12px] font-bold text-[#222] leading-none">.{price.split(".")[1] ?? "00"}</sup>
           </div>
-          <button className="bg-[#444] flex gap-1.5 h-[36px] items-center justify-center px-4 rounded-full w-full hover:bg-[#222] transition-colors">
+          <button className="bg-[#a66062] flex gap-1.5 h-[36px] items-center justify-center px-4 rounded-full w-full hover:bg-[#834748] active:bg-[#794344] transition-colors">
             <CartIconSmall />
             <span className="font-bold text-[14px] text-[#f9f9f9]">Add to Cart</span>
           </button>
@@ -77,7 +77,7 @@ export default function ProductCard({
             <span className="text-[28px] font-bold text-[#222] leading-none">{price.split(".")[0]}</span>
             <sup className="text-[14px] font-bold text-[#222] leading-none">.{price.split(".")[1] ?? "00"}</sup>
           </div>
-          <button className="bg-[#444] flex gap-1.5 h-[40px] items-center justify-center px-6 rounded-full w-full hover:bg-[#222] transition-colors">
+          <button className="bg-[#a66062] flex gap-1.5 h-[40px] items-center justify-center px-6 rounded-full w-full hover:bg-[#834748] active:bg-[#794344] transition-colors">
             <CartIconSmall />
             <span className="font-bold text-[16px] text-[#f9f9f9]">Add to Cart</span>
           </button>
